@@ -2,10 +2,8 @@ import os
 import numpy as np
 import pandas as pd
 import pickle
-import logging
 from sklearn.ensemble import RandomForestClassifier
-import yaml
-from data_ingfestion import logger, load_params, load_data
+from data_ingestion import logger, load_params, load_data
 
 
 

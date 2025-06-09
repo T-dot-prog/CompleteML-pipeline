@@ -1,6 +1,5 @@
-from data_ingfestion import logger
+from data_ingestion import logger
 import os
-import logging
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from nltk.stem.porter import PorterStemmer

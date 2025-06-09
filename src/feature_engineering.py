@@ -1,9 +1,7 @@
 import pandas as pd
 import os
 from sklearn.feature_extraction.text import TfidfVectorizer
-import logging
-import yaml
-from data_ingfestion import logger, load_params
+from data_ingestion import logger, load_params
 
 
 

@@ -4,9 +4,7 @@ import pandas as pd
 import pickle
 import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
-import logging
-import yaml
-from data_ingfestion import logger, load_params, load_data
+from data_ingestion import logger, load_params, load_data
 
 def load_model(file_path: str):
     """Load the trained model from a file."""

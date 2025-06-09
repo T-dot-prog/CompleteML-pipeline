@@ -70,8 +70,8 @@ def main(text_column='text', target_column='target'):
     """
     try:
         # Fetch the data from data/raw
-        train_data = pd.read_csv('E:/CompleteML-pipeline/data/train.csv')
-        test_data = pd.read_csv('E:/CompleteML-pipeline/data/test.csv')
+        train_data = pd.read_csv('E:/CompleteML-pipeline/data/raw/train.csv')
+        test_data = pd.read_csv('E:/CompleteML-pipeline/data/raw/test.csv')
         logger.debug('Data loaded properly')
 
         # Transform the data

@@ -5,6 +5,7 @@ import pickle
 import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 from data_ingestion import logger, load_params, load_data
+from dvclive import Live
 
 def load_model(file_path: str):
     """Load the trained model from a file."""
@@ -71,6 +72,14 @@ def main():
 
         metrics = evaluate_model(clf, X_test, y_test)
 
+
+        # Experiment tracking using dvclive
+        with Live(save_dvc_exp=True) as live:
+            live.log_metric('accuracy', accuracy_score(y_test, y_test))
+            live.log_metric('precision', precision_score(y_test, y_test))
+            live.log_metric('recall', recall_score(y_test, y_test))
+
+            live.log_params(params)
 
         save_metrics(metrics, 'reports/metrics.json')
     except Exception as e:
